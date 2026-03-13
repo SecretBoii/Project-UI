@@ -1,0 +1,88 @@
+.shell { display: flex; min-height: 580px; }
+.main  { flex: 1; overflow: hidden; display: flex; flex-direction: column; }
+.content { flex: 1; overflow-y: auto; padding: 20px; background: var(--bg); }
+.row  { display: flex; gap: 14px; margin-bottom: 14px; }
+.card2 { flex: 2; }
+.cardFull { flex: 1; }
+
+/* Inbox banner */
+.pendingBadge {
+  background: var(--red-light);
+  color: var(--red);
+  border: 1px solid #fca5a5;
+  border-radius: 99px;
+  padding: 2px 10px;
+  font-size: 10px;
+  font-weight: 700;
+}
+.infoNote {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  font-size: 10.5px;
+  color: var(--text2);
+  line-height: 1.7;
+}
+.warnNote {
+  background: var(--yellow-light);
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  font-size: 10.5px;
+  color: #92400e;
+}
+.emptyState { text-align: center; padding: 32px 0; font-size: 12px; color: var(--text2); }
+
+/* Security log */
+.secCard { border-color: #fca5a5 !important; background: #fffafa; }
+.secTitle { color: var(--red); }
+
+/* Role distribution bars */
+.distRow { margin-bottom: 12px; }
+.distLabel { display: flex; justify-content: space-between; font-size: 11px; color: var(--text2); margin-bottom: 5px; }
+
+/* Profile card */
+.profileCard { max-width: 460px; }
+.profileHead { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+.profileName { font-size: 15px; font-weight: 700; }
+.profileSub  { font-size: 11px; color: var(--text2); }
+.profileBadgeRow { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+
+/* Pending banner */
+.banner {
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  font-size: 11px;
+}
+.bannerPending { background: var(--yellow-light); border: 1.5px solid #fde68a; color: #854d0e; }
+.bannerApproved { background: var(--green-light); border: 1.5px solid #86efac; color: #166534; }
+
+/* mono code */
+.mono { font-family: 'JetBrains Mono', monospace; font-size: 10px; }
+
+/* run_count badge */
+.rcBadge {
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #fed7aa;
+  border-radius: 5px;
+  padding: 2px 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+}
+.rcNull {
+  background: var(--surface3);
+  color: var(--text2);
+  border-radius: 5px;
+  padding: 2px 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+}

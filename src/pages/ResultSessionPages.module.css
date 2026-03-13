@@ -1,0 +1,68 @@
+/* ── Result Page ── */
+.resultWrap { background: var(--bg); padding: 20px; min-height: 580px; }
+.resultHeader { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.resultTitle { font-weight: 700; font-size: 14px; }
+.resultSub { font-size: 10px; color: var(--text2); }
+.resultBody { display: flex; gap: 14px; }
+
+.scoreCard {
+  width: 220px;
+  flex-shrink: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+.scoreNum { font-size: 48px; font-weight: 900; color: var(--green); text-align: center; }
+.scoreLabel { font-size: 10px; color: var(--text2); text-align: center; }
+.scoreRow { display: flex; justify-content: space-between; font-size: 11px; margin-top: 8px; }
+.scoreRowKey { color: var(--text2); }
+.scoreRowVal { font-weight: 700; }
+
+.detailArea { flex: 1; display: flex; flex-direction: column; gap: 14px; }
+.aiFeedbox {
+  background: var(--accent-light);
+  border: 1px solid #c7d2fe;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 11.5px;
+  color: #3730a3;
+  line-height: 1.7;
+}
+.dbRecord {
+  background: #0f172a;
+  border-radius: 8px;
+  padding: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  line-height: 2;
+}
+
+/* ── Session Page ── */
+.sessionWrap { background: var(--bg); padding: 20px; min-height: 580px; }
+.sessionHeader { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.sessionTitle { font-weight: 700; font-size: 14px; }
+.sessionSub { font-size: 10px; color: var(--text2); }
+.sessionBody { display: flex; gap: 14px; }
+
+.sessionList {
+  width: 260px;
+  flex-shrink: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+.sessionItem {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1.5px solid var(--border);
+  cursor: pointer;
+  transition: border .12s, background .12s;
+  margin-bottom: 8px;
+}
+.sessionItemActive { border-color: var(--accent); background: var(--accent-light); }
+.sessionItemName { font-weight: 600; font-size: 13px; }
+.sessionItemMeta { display: flex; align-items: center; gap: 6px; margin-top: 6px; }

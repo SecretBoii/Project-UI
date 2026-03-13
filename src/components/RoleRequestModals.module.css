@@ -1,0 +1,69 @@
+.infoBox {
+  background: var(--surface2);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 16px;
+}
+.infoRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.roleArrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background: var(--surface);
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  margin-bottom: 8px;
+}
+.reasonBox {
+  background: var(--accent-light);
+  border: 1px solid #c7d2fe;
+  border-radius: 7px;
+  padding: 8px 10px;
+  font-size: 11px;
+  color: var(--text3);
+  line-height: 1.65;
+}
+.reasonLabel {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: .5px;
+  display: block;
+  margin-bottom: 3px;
+}
+.dbNote {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 9px 13px;
+  margin-bottom: 16px;
+  font-size: 10.5px;
+  color: var(--text2);
+  line-height: 1.7;
+}
+.actions { display: flex; gap: 10px; }
+.warnBox {
+  border-radius: 8px;
+  padding: 9px 12px;
+  margin-bottom: 14px;
+  font-size: 10.5px;
+}
+.warnGreen { background: var(--green-light); border: 1px solid #86efac; color: #065f46; }
+.warnRed   { background: var(--red-light);   border: 1px solid #fca5a5; color: #991b1b; }
+.warnYellow{ background: var(--yellow-light); border: 1px solid #fde68a; color: #92400e; }
+.curRole {
+  background: var(--yellow-light);
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  padding: 10px 13px;
+  margin-bottom: 16px;
+  font-size: 11px;
+  color: #92400e;
+}

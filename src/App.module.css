@@ -1,0 +1,23 @@
+.appTopbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  overflow-x: auto;
+}
+.appLogo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 12px;
+  padding: 10px 0;
+  flex-shrink: 0;
+}
+.appLogoIcon  { font-size: 18px; }
+.appLogoName  { font-weight: 800; font-size: 14px; color: var(--text); }
+.appContent { padding: 24px; max-width: 1440px; margin: 0 auto; }

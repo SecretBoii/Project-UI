@@ -1,0 +1,272 @@
+/* ExerciseFormPage.module.css */
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .sideCol { position: static !important; }
+}
+
+/* ── MAIN COL ── */
+.mainCol { display: flex; flex-direction: column; gap: 16px; }
+.sideCol {
+  display: flex; flex-direction: column; gap: 14px;
+  position: sticky; top: 16px;
+}
+
+/* ── SECTION ── */
+.section {
+  background: #fff;
+  border: 1.5px solid var(--border, #e8ecf8);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sectionHead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text, #1a2040);
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border, #e8ecf8);
+}
+
+.sectionNum {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: var(--blue, #4f6ef7);
+  color: #fff;
+  font-size: 11px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.sectionSub {
+  font-size: 10px;
+  font-weight: 400;
+  color: #9aa3be;
+  margin-left: auto;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ── INPUT ── */
+.inp {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1.5px solid var(--border, #e8ecf8);
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--text, #1a2040);
+  background: #fff;
+  outline: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+.inp:focus {
+  border-color: var(--blue, #4f6ef7);
+  box-shadow: 0 0 0 3px rgba(79,110,247,.1);
+}
+.inpSm { width: 100px; }
+.inpErr { border-color: #ef4444 !important; }
+
+.textarea {
+  composes: inp;
+  resize: vertical;
+  line-height: 1.6;
+  min-height: 80px;
+}
+
+.errMsg {
+  font-size: 11px;
+  color: #ef4444;
+  margin-top: 4px;
+  display: block;
+}
+
+/* ── ROWS ── */
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+@media (max-width: 700px) { .row2 { grid-template-columns: 1fr; } }
+
+.col2 { display: flex; flex-direction: column; gap: 12px; }
+
+/* ── SKILL TAGS ── */
+.tagRow { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; }
+.skillTag {
+  font-size: 10px; font-weight: 600;
+  background: #f5f3ff; color: #7c55f5;
+  padding: 3px 10px; border-radius: 99px;
+}
+
+/* ── DIFFICULTY BUTTONS ── */
+.diffRow { display: flex; gap: 8px; flex-wrap: wrap; }
+.diffBtn {
+  flex: 1; padding: 8px 6px;
+  border: 1.5px solid var(--border, #e8ecf8);
+  border-radius: 8px;
+  font-size: 11px; font-weight: 600;
+  background: #fff; cursor: pointer;
+  font-family: inherit;
+  color: #6b7595;
+  transition: all .15s;
+}
+.diffBtn:hover { border-color: #9aa3be; }
+.diffBtnActive { font-weight: 700; }
+
+/* ── TIME ROW ── */
+.timeRow { display: flex; align-items: center; gap: 8px; }
+.timeUnit { font-size: 12px; color: #9aa3be; }
+
+/* ── ANSWER TYPE ── */
+.typeRow { display: flex; gap: 10px; }
+.typeBtn {
+  flex: 1; padding: 10px 12px;
+  border: 1.5px solid var(--border, #e8ecf8);
+  border-radius: 9px;
+  font-size: 11.5px; font-weight: 600;
+  background: #fff; cursor: pointer;
+  font-family: inherit; color: #6b7595;
+  transition: all .15s;
+}
+.typeBtn:hover { border-color: #9aa3be; background: #fafbff; }
+.typeBtnActive {
+  border-color: var(--blue, #4f6ef7) !important;
+  background: #eef1fe !important;
+  color: var(--blue, #4f6ef7) !important;
+}
+
+/* ── INFO BOX ── */
+.infoBox {
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 11.5px;
+  color: #065f46;
+  line-height: 1.7;
+}
+.infoBox code {
+  background: #d1fae5;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+}
+
+/* ── GOALS ── */
+.goalRow {
+  display: flex; align-items: center; gap: 8px;
+}
+.goalIdx {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: #eef1fe; color: var(--blue, #4f6ef7);
+  font-size: 10px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.goalInp { flex: 1; }
+.removeBtn {
+  width: 24px; height: 24px;
+  border: none; background: #fee2e2; color: #ef4444;
+  border-radius: 50%; cursor: pointer;
+  font-size: 11px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: background .15s;
+}
+.removeBtn:hover { background: #fca5a5; }
+
+/* ── SIDE CARDS ── */
+.statusCard, .dbCard, .flowCard {
+  background: #fff;
+  border: 1.5px solid var(--border, #e8ecf8);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.statusCardHead, .dbCardHead, .flowCardHead {
+  padding: 10px 16px;
+  font-size: 11px; font-weight: 700;
+  background: #fafbff;
+  border-bottom: 1px solid var(--border, #e8ecf8);
+  color: #1a2040;
+  letter-spacing: .3px;
+}
+.statusCardBody { padding: 14px; }
+
+/* status buttons */
+.statusRow { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+.statusBtn {
+  width: 100%; padding: 8px 12px;
+  border: 1.5px solid var(--border, #e8ecf8);
+  border-radius: 7px;
+  font-size: 11.5px; font-weight: 600;
+  background: #fff; cursor: pointer;
+  font-family: inherit; color: #6b7595;
+  text-align: left;
+  transition: all .15s;
+}
+.statusBtn:hover { border-color: #9aa3be; }
+.statusBtnActive { font-weight: 700; }
+
+.statusInfo {
+  font-size: 11px; color: #6b7595; line-height: 1.6;
+  margin-bottom: 14px; padding: 8px 10px;
+  background: #fafbff; border-radius: 6px;
+}
+
+.actionBtns { display: flex; flex-direction: column; gap: 7px; }
+
+/* DB card */
+.dbCardBody { padding: 10px 14px; }
+.dbRow {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 5px 0;
+  border-bottom: 1px solid #f4f6fb;
+  gap: 8px;
+}
+.dbRow:last-child { border-bottom: none; }
+.dbField {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px; color: #9aa3be; flex-shrink: 0;
+}
+.dbVal {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px; color: #374151;
+  text-align: right; overflow: hidden;
+  text-overflow: ellipsis; white-space: nowrap; max-width: 140px;
+}
+.dbEmpty { color: #d1d5db; font-style: italic; }
+
+/* Flow card */
+.flowCard { padding: 12px 14px; }
+.flowCardHead {
+  font-size: 11px; font-weight: 700; color: #1a2040;
+  margin-bottom: 10px; padding-bottom: 8px;
+  border-bottom: 1px solid var(--border, #e8ecf8);
+}
+.flowStep {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 10.5px; color: #374151; font-weight: 500;
+}
+.flowDot {
+  width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+}
+.flowLine {
+  width: 1px; height: 12px; background: #e2e8f0;
+  margin-left: 3.5px;
+}
